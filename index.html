@@ -1,89 +1,137 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG" />
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta
+      property="og:description"
+      content="SOCIAL MEDIA DESCRIPTION TAG TAG"
+    />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG" />
+    <meta
+      name="twitter:description"
+      content="TWITTER BANNER DESCRIPTION META TAG"
+    />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta
+      name="twitter:image"
+      content="static/images/your_twitter_banner_image.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TiP4GEN: Text to Immersive Panorama 4D Scene Generation</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="static/css/bulma.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css" />
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="static/css/index.css" />
 
-  <title>TiP4GEN: Text to Immersive Panorama 4D Scene Generation</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
-</head>
-<body>
-
-
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">TiP4GEN: Text to Immersive Panorama 4D Scene Generation</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="https://ke-xing.github.io/" target="_blank">Ke Xing</a><sup>*</sup>,</span>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">
+                TiP4GEN: Text to Immersive Panorama 4D Scene Generation
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <!-- Paper authors -->
                 <span class="author-block">
-                  <a href="https://scholar.google.com/citations?user=mrOHvI8AAAAJ&hl=en" target="_blank">Hanwen Liang</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="https://ir1d.github.io/" target="_blank">Dejia Xu</a>,
-                  </span>
-                                    <span class="author-block">
-                    <a href="https://yuyangyin.github.io/" target="_blank">Yuyang Yin</a>,
-                  </span>
-                                    <span class="author-block">
-                    <a href="https://www.plataniotis.com/" target="_blank">Konstantinos N. Plataniotis</a>,
-                  </span>
-                   <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=474TbQYAAAAJ&hl=zh-CN" target="_blank">Yao Zhao</a>,
-                  </span>
-                                     <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=qL9Csv0AAAAJ&hl=zh-CN" target="_blank">Yunchao Wei</a>
-                  </div>
+                  <a href="https://ke-xing.github.io/" target="_blank"
+                    >Ke Xing</a
+                  ><sup>1,2</sup><sup>*</sup>,</span
+                >
+                <span class="author-block">
+                  <a
+                    href="https://scholar.google.com/citations?user=mrOHvI8AAAAJ&hl=en"
+                    target="_blank"
+                    >Hanwen Liang</a
+                  ><sup>3</sup><sup>*</sup>,</span
+                >
+                <span class="author-block">
+                  <a href="https://ir1d.github.io/" target="_blank">Dejia Xu</a
+                  ><sup>4</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://yuyangyin.github.io/" target="_blank"
+                    >Yuyang Yin</a
+                  ><sup>1,2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://www.plataniotis.com/" target="_blank"
+                    >Konstantinos N. Plataniotis</a
+                  ><sup>3</sup>,
+                </span>
+                <span class="author-block">
+                  <a
+                    href="https://scholar.google.com/citations?user=474TbQYAAAAJ&hl=zh-CN"
+                    target="_blank"
+                    >Yao Zhao</a
+                  ><sup>1,2</sup>,
+                </span>
+                <span class="author-block">
+                  <a
+                    href="https://scholar.google.com/citations?user=qL9Csv0AAAAJ&hl=zh-CN"
+                    target="_blank"
+                    >Yunchao Wei</a
+                  ><sup>1,2</sup><sup>†</sup>
+                </span>
+              </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"
+                  ><sup>1</sup>Institute of Information Science, Beijing
+                  Jiaotong University<br /><sup>2</sup>Visual Intelligence + X
+                  International Joint Laboratory<br /><sup>3</sup>University of
+                  Toronto<br /><sup>4</sup>The University of Texas at Austin<br />Proceedings
+                  of the 33rd ACM International Conference on Multimedia (MM
+                  '25)</span
+                >
+                <span class="eql-cntrb"
+                  ><small
+                    ><br /><sup>*</sup>Both authors contributed equally to this
+                    research</small
+                  ></span
+                >
+                <span class="eql-cntrb"
+                  ><small><br /><sup>†</sup>Corresponding author</small></span
+                >
+              </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- Arxiv PDF link -->
+                  <!-- <span class="link-block">
                         <a href="static/pdfs/main.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
@@ -91,10 +139,10 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                  <!-- Supplementary PDF link -->
+                  <!-- <span class="link-block">
                       <a href="static/pdfs/190_supp.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -102,233 +150,279 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
+                  </span> -->
+                  <span class="link-block">
+                    <a
+                      href="https://arxiv.org/abs/<ARXIV PAPER ID>"
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
                   </span>
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/ke-xing/TiP4GEN-Text-to-Immersive-Panorama-4D-Scene-Generation" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    <a
+                      href=""
+                      target="_blank"
+                      class="external-link button is-normal is-rounded is-dark"
+                    >
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code(Coming soon)</span>
+                    </a>
                   </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+
+                  <!-- ArXiv abstract Link -->
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/190_supp.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-We introduce <b>TiP4GEN</b>, an advanced text-to-dynamic panorama scene generation framework
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            With the rapid advancement and widespread adoption of VR/AR technologies, there is a growing demand for the creation of high-quality, immersive dynamic scenes.
-However, existing generation works predominantly concentrate on the creation of static scenes or narrow perspective-view dynamic scenes, falling short of delivering a truly 360-degree immersive experience from any viewpoint.
-In this paper, we introduce <b>TiP4GEN</b>, an advanced text-to-dynamic panorama scene generation framework that enables fine-grained content control and synthesizes motion-rich, geometry-consistent panoramic 4D scenes.
-TiP4GEN integrates panorama video generation and dynamic scene reconstruction to create 360-degree immersive virtual environments.
-For video generation, we introduce a <b>Dual-branch Generation Model</b> consisting of a panorama branch and a perspective branch, responsible for global and local view generation, respectively.
-A bidirectional cross-attention mechanism facilitates comprehensive information exchange between the branches.
-For scene reconstruction, we propose a <b>Geometry-aligned Reconstruction Model</b> based on 3D Gaussian Splatting.
-By aligning spatial-temporal point clouds using metric depth maps and initializing scene cameras with estimated poses, our method ensures geometric consistency and temporal coherence for the reconstructed scenes.
-Extensive experiments demonstrate the effectiveness of our proposed designs and the superiority of TiP4GEN in generating visually compelling and motion-coherent dynamic panoramic scenes.
+    <!-- Teaser video-->
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img src="static/images/teaser_01.png" alt="MY ALT TEXT" />
+          <h2 class="subtitle has-text-centered">
+            We introduce <b>TiP4GEN</b>, an advanced text-to-dynamic panorama
+            scene generation framework
+          </h2>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light has-text-centered">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Framework</h2>
-
-      <!-- <iframe  src="static/pdfs/framework.pdf" width="100%" height="550">
-          </iframe> -->
-              <img src="static/images/framework.jpg" alt="MY ALT TEXT"/>
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Image Cases</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
+    </section>
+    <!-- End teaser video -->
+    <!-- <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Video Cases</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+             <div class="item">
        
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <img src="static/images/100489_PanoPred_488_0_0.gif" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                Second image description.
+              </h2>
+            </div>
+            <div class="item">
+       
+              <img src="static/images/100627_PanoPred_626_0_0.gif" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                Second image description.
+              </h2>
+            </div>
+            <div class="item">
+       
+              <img src="static/images/100832_PanoPred_831_0_0.gif" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                Second image description.
+              </h2>
+            </div>
+            <div class="item">
+       
+              <img src="static/images/101029_PanoPred_1028_0_0.gif" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                Second image description.
+              </h2>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section> -->
-<!-- End youtube video -->
+    </section> -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Video Cases</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                With the rapid advancement and widespread adoption of VR/AR
+                technologies, there is a growing demand for the creation of
+                high-quality, immersive dynamic scenes. However, existing
+                generation works predominantly concentrate on the creation of
+                static scenes or narrow perspective-view dynamic scenes, falling
+                short of delivering a truly 360-degree immersive experience from
+                any viewpoint. In this paper, we introduce <b>TiP4GEN</b>, an
+                advanced text-to-dynamic panorama scene generation framework
+                that enables fine-grained content control and synthesizes
+                motion-rich, geometry-consistent panoramic 4D scenes. TiP4GEN
+                integrates panorama video generation and dynamic scene
+                reconstruction to create 360-degree immersive virtual
+                environments. For video generation, we introduce a
+                <b>Dual-branch Generation Model</b> consisting of a panorama
+                branch and a perspective branch, responsible for global and
+                local view generation, respectively. A bidirectional
+                cross-attention mechanism facilitates comprehensive information
+                exchange between the branches. For scene reconstruction, we
+                propose a <b>Geometry-aligned Reconstruction Model</b> based on
+                3D Gaussian Splatting. By aligning spatial-temporal point clouds
+                using metric depth maps and initializing scene cameras with
+                estimated poses, our method ensures geometric consistency and
+                temporal coherence for the reconstructed scenes. Extensive
+                experiments demonstrate the effectiveness of our proposed
+                designs and the superiority of TiP4GEN in generating visually
+                compelling and motion-coherent dynamic panoramic scenes.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </section>
+    <!-- End paper abstract -->
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+    <!-- Paper poster -->
+    <section class="hero is-small is-light has-text-centered">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title">Method</h2>
+
+          <!-- <iframe  src="static/pdfs/framework.pdf" width="100%" height="550">
+          </iframe> -->
+          <img src="static/images/framework.jpg" alt="MY ALT TEXT" />
+          <div class="content has-text-justified">
+            <p>
+              <b>The framework of TiP4GEN.</b> In the dual-branch panorama video
+              generation model (upper), we employ a panorama branch to provide
+              global guidance, ensuring the overall consistency of the generated
+              content. Simultaneously, to leverage the robust knowledge priors
+              inherent in diffusion models about perspective content generation,
+              we incorporate a perspective branch to enhance the diversity and
+              authenticity of the generated content. The bidirectional
+              cross-attention module facilitates information exchange between
+              these two branches. In the reconstruction model (lower), we
+              utilize Monst3r for estimating camera parameters and depth maps to
+              initialize and align the scene geometry, followed by 4D scene
+              optimization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End paper poster -->
+
+    <!-- Image carousel -->
+    <!-- <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Image Cases</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+           
+              <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                First image description.
+              </h2>
+            </div>
+            <div class="item">
+       
+              <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                Second image description.
+              </h2>
+            </div>
+            <div class="item">
+       
+              <img src="static/images/carousel3.jpg" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                Third image description.
+              </h2>
+            </div>
+            <div class="item">
+   
+              <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" />
+              <h2 class="subtitle has-text-centered">
+                Fourth image description.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- End image carousel -->
+
+    <!-- Youtube video -->
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Supplementary Video</h2>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <div class="publication-video">
+                <iframe
+                  src="static/videos/190_supp.mp4"
+                  frameborder="0"
+                  allow="autoplay; encrypted-media"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End youtube video -->
+
+    <!-- Video carousel -->
+
+    <!-- End video carousel -->
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>BibTex Code Here</code></pre>
+      </div>
+    </section>
+    <!--End BibTex citation -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This page was built using the
+                <a
+                  href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank"
+                  >Academic Project Page Template</a
+                >
+                which was adopted from the <a
+                  href="https://nerfies.github.io"
+                  target="_blank"
+                  >Nerfies</a
+                > project page. You are free to borrow the source code of this
+                website, we just ask that you link back to this page in the
+                footer. <br />
+                This website is licensed under a
+                <a
+                  rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/"
+                  target="_blank"
+                  >Creative Commons Attribution-ShareAlike 4.0 International
+                  License</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
-
   </body>
-  </html>
+</html>
